@@ -57,7 +57,7 @@ public class PATRON extends javax.swing.JFrame {
         PVLBL = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(800, 700));
+        setPreferredSize(new java.awt.Dimension(740, 400));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -79,8 +79,9 @@ public class PATRON extends javax.swing.JFrame {
         });
         getContentPane().add(G00, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, -1));
 
+        TITULO.setFont(new java.awt.Font("Arial Narrow", 0, 36)); // NOI18N
         TITULO.setText("RNA_ART INTELIGENCIA ARTIFICIAL");
-        getContentPane().add(TITULO, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, -1, -1));
+        getContentPane().add(TITULO, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, -1, -1));
 
         G01.setBackground(new java.awt.Color(255, 255, 255));
         G01.setFont(new java.awt.Font("Arial Narrow", 0, 10)); // NOI18N
@@ -1254,12 +1255,12 @@ public class PATRON extends javax.swing.JFrame {
             for (int i = 0; i < 25; i++) {
                 NS1 = NS1 + (P0[i] * E1[i]);
             }
-            System.out.println("peso " + NS1);
+            //System.out.println("peso " + NS1);
             //SE ALMACENA NUEVA LISTA PESOS
             for (int i = 0; i < 25; i++) {
                 if (E1[i] == 1) {
                     P1[i] = NS1;
-                    System.out.print(P1[i] + ", ");
+                    //System.out.print(P1[i] + ", ");
                 }
             }
         }
@@ -1269,8 +1270,8 @@ public class PATRON extends javax.swing.JFrame {
                 NS1 = NS1 + (P1[i] * E2[i]);
                 NS2 = NS2 + (P0[i] * E2[i]);
             }
-            System.out.println("ns1= " + NS1);
-            System.out.println("ns2= " + NS2);
+            //System.out.println("ns1= " + NS1);
+            //System.out.println("ns2= " + NS2);
             //SI GANA ENTRADA2
             if (NS2 > NS1) {
 
@@ -1293,7 +1294,7 @@ public class PATRON extends javax.swing.JFrame {
                     low = E2[i] + low;
                 }
                 RS = high / low;
-                System.out.println(RS+" "+PV);
+                //System.out.println(RS+" "+PV);
                 if (RS > PV) {
                     conteoentrada=conteoentrada-1;
 
@@ -1330,8 +1331,8 @@ public class PATRON extends javax.swing.JFrame {
                 NS1 = NS1 + (P1[i] * E3[i]);
                 NS2 = NS2 + (P2[i] * E3[i]);
             }
-            System.out.println("ns1= " + NS1);
-            System.out.println("ns2= " + NS2);
+            //System.out.println("ns1= " + NS1);
+            //System.out.println("ns2= " + NS2);
             //PERTENECE A CLASE2
             if (NS2 > NS1) {
                 //RELACION SEMEJANZA
@@ -1359,7 +1360,7 @@ public class PATRON extends javax.swing.JFrame {
                     for (int i = 0; i < 25; i++) {
                         if (E3[i] == 1) {
                             P3[i] = NS2;
-                            System.out.print(P3[i] + ", ");
+                            //System.out.print(P3[i] + ", ");
                         } else {
                             P3[i] = 0;
                         }
@@ -1391,7 +1392,7 @@ public class PATRON extends javax.swing.JFrame {
                     for (int i = 0; i < 25; i++) {
                         if (E3[i] == 1) {
                             P3[i] = NS2;
-                            System.out.print(P3[i] + ", ");
+                            //System.out.print(P3[i] + ", ");
                         } else {
                             P3[i] = 0;
                         }
@@ -1404,8 +1405,8 @@ public class PATRON extends javax.swing.JFrame {
                 NS1 = NS1 + (P1[i] * E4[i]);
                 NS2 = NS2 + (P2[i] * E4[i]);
             }
-            System.out.println("ns1= " + NS1);
-            System.out.println("ns2= " + NS2);
+            //System.out.println("ns1= " + NS1);
+            //System.out.println("ns2= " + NS2);
             //PERTENECE A CLASE2
             if (NS2 > NS1) {
                 //RELACION SEMEJANZA
@@ -1465,7 +1466,7 @@ public class PATRON extends javax.swing.JFrame {
                     for (int i = 0; i < 25; i++) {
                         if (E3[i] == 1) {
                             P3[i] = NS2;
-                            System.out.print(P4[i] + ", ");
+                            //System.out.print(P4[i] + ", ");
                         } else {
                             P3[i] = 0;
                         }
@@ -1474,26 +1475,9 @@ public class PATRON extends javax.swing.JFrame {
             }
         }
         if (conteoentrada == 4) {
-
+            System.out.println("falta implementar mas entradas de patrones :/");
         }
-        if (conteoentrada == 5) {
-
-        }
-        if (conteoentrada == 6) {
-
-        }
-        if (conteoentrada == 7) {
-
-        }
-        if (conteoentrada == 8) {
-
-        }
-        if (conteoentrada == 9) {
-
-        }
-        if (conteoentrada == 10) {
-            System.out.println("max de entradas");
-        }
+        
         conteoentrada = conteoentrada + 1;
     }
 
